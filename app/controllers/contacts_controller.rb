@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   def new
-    @contact = Contact.new
+    @contact = Contact.new #
   end
   
   def create
@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
     end
   end
   
-  private
+  private # Security feature (protected)
     def contact_params
        params.require(:contact).permit(:name, :email, :comments)
     end
